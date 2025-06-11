@@ -31,10 +31,12 @@ def menu_principal():
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     estoque = contar_estoque()
     texto = (
-        f"🧾 Bem-vindo ao bot!\n"
-        f"Cada CPF custa R$ 0,25.\n"
-        f"Estoque atual: {estoque} CPFs\n\n"
-        "Use o menu abaixo para navegar:"
+        "👤 *Bem-vindo ao Bot de CPFs Sem Pix para China!*\n\n"
+        "💸 *Preço:* R$ 0,25 por CPF\n"
+        "📄 *Produto:* CPF PARA CHINA\n"
+        "✅ *Compatível com:* GoBank, FastBank\n\n"
+        f"📦 *Estoque atual:* {estoque} CPFs\n\n"
+        "👇 Use o menu abaixo para navegar e realizar sua compra."
     )
     await update.message.reply_text(texto, reply_markup=menu_principal())
 
@@ -92,7 +94,7 @@ async def receber_texto(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     estoque = contar_estoque()
     texto = (
-        "👤 *Bem-vindo ao Bot de CPFs para China!*\n\n"
+        "👤 *Bem-vindo ao Bot de CPFs Sem Pix para China!*\n\n"
         "💸 *Preço:* R$ 0,25 por CPF\n"
         "📄 *Produto:* CPF PARA CHINA\n"
         "✅ *Compatível com:* GoBank, FastBank\n\n"
